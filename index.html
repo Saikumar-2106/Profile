@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+    body {
+      background: linear-gradient(-45deg, #ffffff, #ffffff, #ffffff, #ffffff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    header {
+      display: flex;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height:50px;
+      background: #ffffff; 
+      z-index: 999;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: Algerian ;
+      color:#3ce739;
+      padding-left: 1rem;
+    }
+
+    .menu-toggle {
+      display: block; /* default for mobile */
+    }
+
+    /* Hide toggle menu on screens wider than 768px */
+    @media screen and (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+      nav {
+        display: flex !important; /* show nav by default on larger screens */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+    }
+
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color:#3ce739;
+      margin: 0 0rem;
+      font-size: 20px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    nav a.active {
+      font-size: 20px;
+      color:#10e829;
+      border-bottom: 2px solid rgb(16, 234, 16);
+    }
+
+    body {
+      padding-top: 40px;
+    }
+    
+
+    /* Home2 Section Styling */
+    .home2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 40px;
+    }
+
+    .home2 .content {
+      width: 700px;
+      color: #000000;
+    }
+
+    .home2 .content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .home2 .content h2 span {
+
+      color: #e809d9;
+      font-weight: bold;
+    }
+    .home2 .content p span {
+      color: #1ff40b;
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+    }
+
+    .typing-text {
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+      font-size: 20px;
+      color: #05f515;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 80% }
+    }
+
+    @keyframes blink {
+      40% { border-color: transparent }
+    }
+
+    .home2 .content p {
+      display:flex;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #000000;
+      width:750px;
+      text-align:justify;
+    }
+    
+    .home2 .socials {
+      margin-top: 10px;
+    }
+
+    .home2 .social-icons {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    .home2 .social-icons a {
+      font-size: 40px;
+      color: #05f515;
+      transition: color 0.3s ease;
+      padding: 20px 10px;
+      text-decoration: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .home2 {
+        flex-direction: column;
+        text-align: center;
+      }
+      .home2 .image {
+        margin-top: 30px;
+      }
+      .home2 .social-icons {
+        justify-content: center;
+      }
+    }
+
+
+    /* About2 Section Styling */
+    .about2 {
+      background-color: #ffffff;
+      padding: 30px 30px;
+      text-align: center;
+    }
+
+    .about2 .heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff0000;
+      margin-bottom: 10px;
+    }
+
+    .about2 span {
+      font-size: 1.2rem;
+      color: #000000;
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    .about2 .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about2 .row .image img {
+      width: 320px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .about2 .content {
+      flex: 1;
+      padding: 0 30px;
+      text-align: left;
+    }
+
+    .about2 .content h3 {
+      font-size: 1.8rem;
+      color: #e809d9;
+      margin-bottom: 10px;
+    }
+
+    .about2 .tag {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ff6f61;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .about2 .content p {
+      font-size: 1rem;
+      color: #000000;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      text-align:justify;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #aa40ec;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2232df;
+    }
+
+
+    /* Skills Section Styling */
+    .skills2 {
+      padding: 30px 20px;
+      background: linear-gradient(to right, #ffffff, #ffffff);
+    }
+
+    .skills2 .heading {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: #e41919;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* Container for all skills */
+    .skills-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Individual Skill Box */
+    .skill {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 15px 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Skill Name */
+    .skill label {
+      font-weight: 500;
+      font-size: 18px;
+      color: #1171d2;
+      margin-bottom: 10px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    /* Progress Bar Container */
+    .progress {
+      background-color: #ecf0f1;
+      border-radius: 50px;
+      height: 22px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated Bar */
+    .progress-bar {
+      height: 100%;
+      text-align: right;
+      padding-right: 15px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      background: linear-gradient(90deg, #2980b9, #6dd5fa);
+      border-radius: 50px;
+      transition: width 1.5s ease-in-out;
+    }
+    /* Add different gradient colors for each bar */
+    .skill:nth-child(1) .progress-bar { background: linear-gradient(to right, #e44d26, #f16529); } /* HTML */
+    .skill:nth-child(2) .progress-bar { background: linear-gradient(to right, #264de4, #2965f1); } /* CSS */  
+    .skill:nth-child(3) .progress-bar { background: linear-gradient(to right, #f7df1e, #f5b300); color: #333; } /* JS */
+    .skill:nth-child(4) .progress-bar { background: linear-gradient(to right, #4b8bbe, #306998); } /* Python */
+    .skill:nth-child(5) .progress-bar { background: linear-gradient(to right, #c51414, #e43359); } /* Java */
+    .skill:nth-child(6) .progress-bar { background: linear-gradient(to right, #00758f, #00b8d4); } /* MySQL */
+    .skill:nth-child(7) .progress-bar { background: linear-gradient(to right, #8b1972, #dc14dc); } /* Django */
+    .skill:nth-child(8) .progress-bar { background: linear-gradient(to right, #83cd29, #539e43); } /* Node.js */
+    .skill:nth-child(9) .progress-bar { background: linear-gradient(to right, #9b59b6, #8e44ad); } /* DSA */
+
+    
+    /* Projects Section Styling */
+    .projects {
+      background: linear-gradient(to right, #ffffff, #ffffff);
+      padding: 30px 20px;
+    }
+    .project-section-title {
+      text-align: center;
+      font-size: 36px;
+      color: #e10e0e;
+      margin-bottom: 0px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      border-radius: 25px;
+    }
+
+    .project-box {
+      display: block;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .project-image {
+      width: 400px;
+      height: 200px;
+    }
+
+    .project-title {
+      display:block;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-align: center;
+      background-color: #a8bca8;
+      color: #000000;  
+    }
+
+    .project-description {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      right: 0;
+      background: rgb(220, 225, 233);
+      color: #000000;
+      font-size: 0.95rem;
+      padding: 15px;
+      transition: bottom 0.4s ease;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+    }
+    .project-box:hover .project-description {
+      bottom: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Contact Section Styling */
+    .contact {
+      padding: 30px 20px;
+      background: linear-gradient(to right, #ffffff, #ffffff);
+      transition: background 0.5s ease;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #ed1010;
+      animation: slideInDown 1s ease-out;
+    }
+    
+    .contact-section {
+      display: inline-flex;
+      gap: 60px;
+    }
+
+    .image-box {
+      margin-left: 20px;
+      width: 400px;
+      border-radius: 20px;
+    }
+
+    .image-box img {
+      margin-left: 20px;
+      width: 100%;
+      height: auto;
+      display: inline-flex;
+    }
+
+    /* Animations */
+    @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {  
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .contact-section {
+      gap:200px;
+    }
+    form[name="submit-to-google-sheet"] {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }  
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="phone"],
+    textarea {
+      width: 300px;
+      padding: 10px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+      transition: border 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="phone"]:focus,
+    textarea:focus {
+      border-color: #6a11cb;
+      outline: none;
+      background: #fff;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 300px;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+    }
+
+    #msg {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    @media (max-width: 600px) {
+      form[name="submit-to-google-sheet"] {
+        padding: 25px;
+      }
+    }
+
+    footer {
+      text-align: center;
+    }
+
+
+/* Small Devices (Mobiles, 576px and below) */
+/* Small Devices (Mobiles, 576px and below) */
+@media (max-width: 576px) {
+  body {
+    background-color: #ffffff;
+  }
+  header {
+    height:50px;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background-color: #000000;
+    border: 1px solid #222;
+    padding: 1px 0;
+    z-index: 999;
+    border-radius: 5px;
+  }
+
+  nav a {
+    color: #ffffff;
+    padding: 1px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+  }
+
+  nav a:hover {
+    background-color: #333333;
+  }
+
+  nav.active,
+  nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    z-index: 999;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+  .home2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+    }
+
+    .home2 .content {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .home2 .content h2 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .home2 .content p {
+    font-size: 16px;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .home2 .content p span {
+    font-size: 16px;
+  }
+
+  .typing-text {
+    font-size: 16px;
+    width: 100%;
+    animation: typing 2.5s steps(25, end) forwards, blink 0.75s step-end infinite;
+  }
+
+    .home2 .socials {
+      margin-top: 10px;
+    }
+
+    .home2 .social-icons {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    .home2 .social-icons a {
+      font-size: 40px;
+      color: #05f515;
+      transition: color 0.3s ease;
+      padding: 20px 10px;
+      text-decoration: none;
+    }
+    .about2 {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .about2 .heading {
+    font-size: 2rem;
+  }
+
+  .about2 span {
+    font-size: 1rem;
+  }
+
+  .about2 .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about2 .row .image img {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .about2 .content {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .about2 .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .about2 .tag {
+    font-size: 1rem;
+  }
+
+  .about2 .content p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  /* Skills Section */
+  .skills2 {
+    padding: 10px 15px;
+  }
+
+  .skills2 .heading {
+    font-size: 28px;
+  }
+
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill {
+    padding: 15px;
+  }
+
+  .skill label {
+    font-size: 16px;
+  }
+
+  .progress {
+    height: 18px;
+  }
+
+  .progress-bar {
+    font-size: 12px;
+    padding-right: 10px;
+    line-height: 18px;
+  }
+
+  /* Projects Section */
+  .projects {
+    padding: 10px 15px;
+  }
+
+  .project-section-title {
+    font-size: 28px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .contact {
+    padding:10px 10px;
+  }
+  .contact .heading {
+    font-size: 28px;
+    text-align:center;
+  }
+  .contact-section {
+    display:block;
+    padding:10px 15px;
+  }
+.image-box img {
+  width: 200px;
+  height: 120px;
+}
+  
+  form[name="submit-to-google-sheet"] {
+      background: #fff;
+      padding: 20px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="phone"],
+    textarea {
+      width: 280px;
+      padding: 10px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+      transition: border 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="phone"]:focus,
+    textarea:focus {
+      border-color: #6a11cb;
+      outline: none;
+      background: #fff;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 280px;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+    }
+
+    #msg {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    @media (max-width: 600px) {
+      form[name="submit-to-google-sheet"] {
+        padding: 25px;
+      }
+    }
+
+    footer {
+      text-align: center;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">My Portfolio</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <section class="home2" id="home" >
+    <div class="content">
+      <br>
+      <h2>Hi,There<br/> I'm <span>SANJEEVU.SAI KUMAR</span></h2>
+      <p>I am  &nbsp; <span class="typing-text"></span></p><br>
+      <p>My main goal to help & satisficed the local & global clients by web development solutions,Motivated data scientist experienced in data analysis and data visualization using Python . Proven record of delivering accurate models and committed to continuous learning and growth.</p>
+      <div class="socials">
+          <ul class="social-icons">
+            <center>
+              <a id="contact-linkedin" href="https://www.linkedin.com/in/sanjeevu-sai-kumar-550b13250/" class="fa-brands fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a id="contact-github" href="https://github.comSaikumar-2106/" class="fa-brands fa-github" aria-label="GitHub" target="_blank"></a>
+              <a id="contact-instagram" href="https://www.instagram.com/saikumar_0210/?next=%2F&hl=en" class="fa-brands fa-instagram" aria-label="Instagram" target="_blank"></a>
+            </center>
+          </ul>
+      </div>
+    </div> 
+  </section>
+  <section class="about2" id="about">
+    <h2 class="heading"><i class="fa-solid fa-address-card"></i> &nbsp; About Me</h2>
+    <span>My Introduction</span>
+    <div class="row">
+        <div class="image">
+            <img src="sai_20231127.jpg" >
+        </div>
+        <div class="content">
+            <h3 id="user-detail-name">I'm SANJEEVU SAI KUMAR <i class="fab fa-black-tie"></i></h3>
+            <p id="user-detail-intro">Hi, I'm sai kumar a junior data scientist with a strong passion for technology and innovation. My skills and expertise span across various areas such as software development, web development, data analysis, UX/UI design and businesses analysis. I am currently working as a software engineer student at Aitam college, where I am constantly developing and implementing new software applications to meet the needs of our faculty. My experience in data analysis and machine learning has also enabled me to design and develop predictive models to help businesses make informed decisions. </p>
+        </div>
+        <a href="Saikumar_Resume.pdf" download class="btn">Resume</a>
+    </div>
+  </section>
+  <!-- skills section starts -->
+  <section class="skills2" id="skills">
+  <h2 class="heading"><i class="fa-solid fa-code"></i>&nbsp;My Technical Skills</h2>
+  <div class="container">
+    <div class="skills-wrapper">
+      <div class="skill">
+        <label>HTML</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 95%;">95%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>CSS</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;">90%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;">85%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>Python</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 88%;">88%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>Java</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>MySQL</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;">85%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>Django</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 75%;">75%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>Node.js</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%;">70%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <label>DSA</label>
+        <div class="progress">
+          <div class="progress-bar" style="width: 78%;">78%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="projects" id="projects">
+    <h2 class="project-section-title">My Projects</h2>
+    <div class="project-grid">
+      <div class="project-box">
+        <img src="port.png" class="project-image">
+        <div class="project-title">Portfolio Website Using Html, Css and JavaScript</div>
+        <div class="project-description">As part of my third year, I developed a Student management portal website using with Django 
+          Framework. In this project, I gained practical experience in developing web applications. I learned essential 
+          technologies, including HTML, CSS, JavaScript, Python, and MySQL. This experience strengthened my web 
+          development skills and provided a solid foundation in building dynamic, database-driven applications. </div>
+      </div>
+      <div class="project-box">
+        <img src="Student.png"  class="project-image">
+        <div class="project-title">Student Management System using Django Framework</div>
+        <div class="project-description">As part of my fouth year.I focused on web development using Django, I gained practical 
+          experience in developing web applications. I learned essential technologies, including HTML, CSS, 
+          JavaScript, Python, and MySQL. As part of the program, I developed a student management portal using 
+          Django, focusing on a user-friendly interface and efficient data management. This experience strengthened 
+          my web development skills and provided a solid foundation in building dynamic, database-driven applications.</div>
+      </div>
+      <div class="project-box">
+        <img src="cozy.png"  class="project-image">
+        <div class="project-title">Cozy Table Restaurant Management Using Angular Stack</div>
+        <div class="project-description">As part of my internship at Infosys Springboard, I developed The Cozy: Automation of Restaurant 
+          Table Management using the Angular stack while following the Agile methodology. This project provided 
+          hands-on experience in frontend development, Agile workflows, and project management. During this project 
+          , I worked as a scrum master and developer in my team and we developed a menu management section in this 
+          project.</div>
+      </div>
+    </div> 
+  </section>
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+    <div class="contact-section">
+      <div class="image-box">
+        <img draggable="false" src="contact1.png" alt="Contact Image">
+      </div>
+      <form method="post" name="submit-to-google-sheet">
+        <label for="Name">Full Name</label>
+        <input type="text" id="Name" name="Name" required placeholder="Enter your full name">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" required placeholder="Enter your email">
+        <label for="Mobile">Mobile No</label>
+        <input type="phone" id="Mobile" name="Mobile" required placeholder="Enter your Mobile">
+        <label for="Message">Message</label>
+        <textarea id="Message" name="Message" rows="6" required placeholder="Write your text here"></textarea>
+        <input type="submit" value="Submit">
+        <span id="msg"></span>
+    </form>    
+</div>
+</div>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyyXhPIAAzDWaPrgExo5nDNoAim2teGSlQGVmfmCGVQHNZDLpaSn6aCtTSm73uGT7RZ/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg=document.getElementById("msg")
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },2000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+}) 
+</script>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Sanjeevu Sai Kumar. All Rights Reserved.
+  </footer>
+  <script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("#navbar a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+  <script>
+  function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+<script>
+  const words = ["Web Developer", "Data Analyst", "AIML Engineer"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  const typingElement = document.querySelector(".typing-text");
+  let isDeleting = false;
+  function type() {
+    const currentWord = words[wordIndex];
+    const currentText = currentWord.substring(0, charIndex);
+    typingElement.textContent = currentText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", type);
+</script>
+</body>
+</html>
